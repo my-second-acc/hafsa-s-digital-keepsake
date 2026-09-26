@@ -6,14 +6,6 @@ import { birthday } from "@/lib/birthday-content";
 import hero from "@/assets/birthday-hero.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [
-    { title: "Happy Birthday, Hafsa ♡ — A Little Something For You" },
-    { name: "description", content: "A little corner of the internet made with love for Hafsa: memories, notes, surprises, and a birthday wish." },
-    { property: "og:title", content: "Happy Birthday, Hafsa ♡" },
-    { property: "og:description", content: "A little corner of the internet made with love for Hafsa." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ] }),
   component: BirthdayPage,
 });
 
