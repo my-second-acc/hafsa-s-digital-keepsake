@@ -59,7 +59,7 @@ function Polaroid({
   index,
   compact = false,
 }: {
-  memory: (typeof birthday.memories)[number];
+  memory: { image: string; caption: string; alt: string; date?: string };
   index: number;
   compact?: boolean;
 }) {
@@ -70,7 +70,7 @@ function Polaroid({
       </div>
       <figcaption>
         <span>{memory.caption}</span>
-        <small>{memory.date}</small>
+        {memory.date && <small>{memory.date}</small>}
       </figcaption>
     </figure>
   );
