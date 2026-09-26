@@ -352,6 +352,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .qualities-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }.quality-card { min-height: 225px; padding: 19px; }.quality-card h3 { font-size: 24px; }.quality-card p { font-size: 12px; }
   .gifts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }.gift-item { height: 265px; }.gift-art { height: 160px; }
   .scrapbook-page { min-height: auto; padding: 70px 23px 32px; }.scrapbook-images { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 17px; }.scrapbook-images .scrapbook-image-item { margin: 0 !important; }.scrapbook-images .scrapbook-image-item:last-child { grid-column: span 2; width: 48%; justify-self: center; }.scrapbook-note { position: relative; left: auto; bottom: auto; width: 100%; margin-top: 22px; font-size: 22px; padding: 15px 10px; }.scrapbook-stamp { transform: rotate(8deg) scale(.8); top: 10px; right: 14px; }.scrapbook-bottom { margin-top: 35px; }
+  .scrapbook-images .scrapbook-image-item:nth-child(2) { margin-top: 0 !important; }
   .letter-paper { margin-inline: 12px; }.letter-copy { font-size: 17px; }
 }
 @media (max-width: 430px) {
