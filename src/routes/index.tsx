@@ -85,7 +85,6 @@ function BirthdayPage() {
     { image: string; caption: string; date: string; alt: string }[]
   >([]);
   const [musicPlaying, setMusicPlaying] = useState(false);
-  const [musicSource, setMusicSource] = useState(birthday.musicSrc);
   const fileRef = useRef<HTMLInputElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -137,33 +136,6 @@ function BirthdayPage() {
     e.target.value = "";
   }
 
-  async function toggleMusic() {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (musicPlaying) {
-      audio.pause();
-      setMusicPlaying(false);
-    } else if (musicSource) {
-      try {
-        await audio.play();
-        setMusicPlaying(true);
-      } catch {
-        setMusicPlaying(false);
-      }
-    } else document.getElementById("music-upload")?.click();
-  }
-
-  function chooseMusic(e: ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setMusicSource(URL.createObjectURL(file));
-    setTimeout(() => {
-      audioRef.current
-        ?.play()
-        .then(() => setMusicPlaying(true))
-        .catch(() => setMusicPlaying(false));
-    }, 0);
-  }
 
   return (
     <div className="birthday-site">
@@ -525,52 +497,7 @@ function BirthdayPage() {
         <span>HAPPY BIRTHDAY, HAFSA ✦</span>
       </footer>
 
-      <div className="music-control">
-        <input
-          id="music-upload"
-          type="file"
-          accept="audio/*"
-          className="sr-only"
-          onChange={chooseMusic}
-          aria-label="Choose birthday music"
-        />
-        <audio
-          ref={audioRef}
-          src={musicSource || undefined}
-          loop
-          onEnded={() => setMusicPlaying(false)}
-        />
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={toggleMusic}
-          aria-label={
-            musicPlaying ? "Pause music" : musicSource ? "Play music" : "Choose music file"
-          }
-          title={
-            musicPlaying ? "Pause music" : musicSource ? "Play music" : "Choose your birthday music"
-          }
-        >
-          {musicPlaying ? (
-            <Pause size={18} />
-          ) : musicSource ? (
-            <Play size={18} />
-          ) : (
-            <Music2 size={18} />
-          )}
-        </Button>
-        {musicSource && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => document.getElementById("music-upload")?.click()}
-            aria-label="Change music"
-            title="Change music"
-          >
-            <Volume2 size={16} />
-          </Button>
-        )}
-      </div>
+      
 
       {(openGift !== null || finalOpen) && (
         <div
