@@ -3,6 +3,7 @@ import luckyone from "@/assets/luckyone-1.jpg";
 import onderland1 from "@/assets/onderland-1.jpeg";
 import onderland2 from "@/assets/onderland-2.jpg";
 import marriott from "@/assets/marriott.jpeg";
+import bday from "@/assets/bday.jpeg";
 
 
 // Replace these sample photos and words with your own memories of Hafsa.
@@ -12,7 +13,7 @@ export const birthday = {
     { image: marriott, caption: "First, we met at Marriott, and honestly, it was such a memorable day with you. Our endless yapping and snaps made it so wonderful. ♡", alt: "Two friends sharing a quiet cafe moment" },
     { image: onderland2, caption: "Then, we decided to go on a roller coaster in the exact same outfits. That made the whole ride even more fun with you. ♡", alt: "Two friends sharing a quiet cafe moment" },
     { image: coffee, caption: "After all the rides and fun, we had lunch at Xanders and then a coffee date with that single cute rose. Your pasta bites were the best. ♡", alt: "Two friends sharing a quiet cafe moment" },
-    { image: luckyone, caption: "Then came my best birthday celebration at Gloria Jeans, with that cheesecake and those yummy wrap bites. It was such a lovely day. ♡", alt: "Flowers and a picnic shared by friends" },
+    { image: bday, caption: "Then came my best birthday celebration at Gloria Jeans, with that cheesecake and those yummy wrap bites. It was such a lovely day. ♡", alt: "Flowers and a picnic shared by friends" },
     { image: onderland1, caption: "And lastly, we took some snaps at the Onderland escalator before saying goodbye to each other. A perfect little ending to our day. ♡", alt: "Two friends walking beneath spring blossoms" },
   ],
   qualities: [
